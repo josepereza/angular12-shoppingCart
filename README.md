@@ -1,4 +1,4 @@
-![Alt text](https://i.ytimg.com/vi/i-oYrcNtc2s/hqdefault.jpg "dominicode")
+
 # Nota: Reparacion fallo
 * Para que funcione bien el stock y los details tenemos que modificar en el archivo: checkout.component.ts lo siquiente:
 
@@ -18,6 +18,7 @@ private prepareDetails(): Details[] {
     return details;
   }
 ```
+![Alt text](https://i.ytimg.com/vi/i-oYrcNtc2s/hqdefault.jpg "dominicode")
 # Curso de Angular 12
 
 En este curso de Angular 12 aprenderás a trabajar con Angular.
