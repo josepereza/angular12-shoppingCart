@@ -1,5 +1,23 @@
 ![Alt text](https://i.ytimg.com/vi/i-oYrcNtc2s/hqdefault.jpg "dominicode")
+# Nota: Reparacion fallo
+* Para que funcione bien el stock y los details tenemos que modificar en el archivo: checkout.component.ts lo siquiente:
 
+```
+private prepareDetails(): Details[] {
+    const details: Details[] = [];
+    this.cart.forEach((product: Product) => {
+      const { id: productId, name: productName, qty: quantity, stock } = product;
+      const updateStock = (stock - quantity);
+
+      this.productsSvc.updateStock(productId, updateStock)
+        
+        .subscribe()
+       details.push({ productId, productName, quantity })
+
+    })
+    return details;
+  }
+```
 # Curso de Angular 12
 
 En este curso de Angular 12 aprenderás a trabajar con Angular.
